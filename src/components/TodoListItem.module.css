@@ -1,0 +1,15 @@
+.todo-list__item {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  background: darkgray;
+}
+
+.todo-list__item div {
+  max-width: 200px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

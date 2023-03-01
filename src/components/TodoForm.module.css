@@ -1,0 +1,41 @@
+.todo-form{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 2rem;
+}
+.form-control{
+  display: grid;
+  gap: 0.5rem;
+  position: relative;
+  padding-bottom: 2rem;
+}
+.form-control input{
+  padding: 5px 10px;
+  border: 1px solid darkgray;
+  min-width: 238.5px;
+}
+.error{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 0.75rem;
+  color: red;
+}
+
+.form-control input.invalid{
+  border-color: red;
+}
+
+.todo-form button{
+  margin-bottom: 2rem;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.todo-form button:disabled{
+  pointer-events: none;
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
