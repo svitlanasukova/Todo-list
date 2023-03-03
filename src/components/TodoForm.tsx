@@ -3,7 +3,9 @@ import useInput from '../hooks/use-input';
 import classes from './TodoForm.module.css';
 
 const isNotEmpty: Function = (value: string) => value.trim() !== '';
-const TodoForm: React.FC<{ onAddTodo: Function }> = props => {
+const TodoForm: React.FC<{
+	onAddTodo: (val: { title: string; description: string }) => void;
+}> = props => {
 	const {
 		value: enteredTitle,
 		isValid: enteredTitleIsValid,

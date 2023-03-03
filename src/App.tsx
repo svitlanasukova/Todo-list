@@ -14,20 +14,15 @@ function App() {
 		state => state.items,
 	);
 
-	const cons = (val: Todo) => {
+	const addTodoHandler = (val: { title: string; description: string }) => {
 		const id = todoList.length > 0 ? todoList[todoList.length - 1].id + 1 : 1;
 		dispatch(
-			todoListActions.addItem({
-				id: id,
-				title: val.title,
-				description: val.description,
-				completed: false,
-			}),
+			todoListActions.addItem(new Todo(id, val.title, val.description, false)),
 		);
 	};
 	return (
 		<>
-			<TodoForm onAddTodo={cons} />
+			<TodoForm onAddTodo={addTodoHandler} />
 			<TodoList items={todoList} />
 		</>
 	);
