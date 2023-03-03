@@ -6,6 +6,7 @@ const isNotEmpty: Function = (value: string) => value.trim() !== '';
 const TodoForm: React.FC<{
 	onAddTodo: (val: { title: string; description: string }) => void;
 }> = props => {
+	console.log('render TodoForm');
 	const {
 		value: enteredTitle,
 		isValid: enteredTitleIsValid,

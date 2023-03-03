@@ -8,6 +8,7 @@ import Modal from './Modal';
 import classes from './TodoListItem.module.css';
 
 const TodoListItem: React.FC<Todo> = props => {
+	console.log('render TodoListItem');
 	const dispatch = useDispatch();
 	const [modalIsVisible, setModalIsVisible] = useState(false);
 

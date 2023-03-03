@@ -6,6 +6,7 @@ import { TodoList as TodoListInterface } from '../store/todolist-slice';
 import classes from './TodoList.module.css';
 
 const TodoList: React.FC<TodoListInterface> = props => {
+	console.log('render TodoList');
 	return (
 		<div className={classes['todo-list']}>
 			<div className={classes['todo-list__header']}>

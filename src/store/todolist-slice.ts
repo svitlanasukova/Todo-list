@@ -14,7 +14,7 @@ const todoListSlice = createSlice({
 	initialState: initialTodoListState,
 	reducers: {
 		addItem(state: TodoList, action: PayloadAction<Todo>) {
-			state.items.push(action.payload);
+			state.items.push(JSON.parse(JSON.stringify(action.payload)));
 		},
 		changeItemStatus(state: TodoList, action: PayloadAction<number>) {
 			const item = state.items.find(item => item.id === action.payload);

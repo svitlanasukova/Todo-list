@@ -22,6 +22,7 @@ const Modal: React.FC<{
 	onClose: MouseEventHandler;
 	children: ReactNode;
 }> = props => {
+	console.log('render modal');
 	return (
 		<Fragment>
 			{ReactDOM.createPortal(
