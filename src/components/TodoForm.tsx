@@ -29,7 +29,7 @@ const TodoForm: React.FC<{ onAddTodo: Function }> = props => {
 		formIsValid = true;
 	}
 
-	const todoFormSubmitHandler = (event: React.SyntheticEvent) => {
+	const todoFormSubmitHandler = (event: React.FormEvent) => {
 		event.preventDefault();
 
 		if (!formIsValid) {

@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import {
-	TodoListItem as TodoListItemType,
-	todoListActions,
-} from '../store/todolist-slice';
+import { todoListActions } from '../store/todolist-slice';
+import Todo from '../models/Todo';
 import Modal from './Modal';
 
 import classes from './TodoListItem.module.css';
 
-const TodoListItem: React.FC<TodoListItemType> = props => {
+const TodoListItem: React.FC<Todo> = props => {
 	const dispatch = useDispatch();
 	const [modalIsVisible, setModalIsVisible] = useState(false);
 

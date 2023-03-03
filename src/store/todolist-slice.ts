@@ -1,14 +1,8 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-
-export type TodoListItem = {
-	id: number;
-	title: string;
-	description: string;
-	completed: boolean;
-};
+import Todo from '../models/Todo';
 
 export interface TodoList {
-	items: TodoListItem[];
+	items: Todo[];
 }
 
 const initialTodoListState: TodoList = {
@@ -19,7 +13,7 @@ const todoListSlice = createSlice({
 	name: 'todoList',
 	initialState: initialTodoListState,
 	reducers: {
-		addItem(state: TodoList, action: PayloadAction<TodoListItem>) {
+		addItem(state: TodoList, action: PayloadAction<Todo>) {
 			state.items.push(action.payload);
 		},
 		changeItemStatus(state: TodoList, action: PayloadAction<number>) {
